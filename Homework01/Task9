@@ -1,0 +1,3 @@
+birth_year = 2004
+current_year = 2026
+print("მომავალ წელს შენ იქნები " + str(current_year + 1 - birth_year) + " წლის")

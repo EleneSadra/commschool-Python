@@ -1,0 +1,4 @@
+minutes = 350
+hours = int(minutes / 60)
+minutes_left = minutes - hours * 60
+print(str(hours) + " საათი " + str(minutes_left) + " წუთი ")
