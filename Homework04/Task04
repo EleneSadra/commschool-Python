@@ -1,0 +1,24 @@
+# 4 პალინდრომი
+# ამოცანა: შეამოწმე, არის თუ არა შეყვანილი ტექსტი პალინდრომი (მხოლოდ ასოები/ციფრები). თუ
+# არაა, შესთავაზე ყველაზე ახლო პალინდრომი ერთი სიმბოლოს ჩასმით/წაშლით.
+
+import string
+
+while True:
+    choose = input("Check if palindrome: ")
+    valid = True
+    
+    for char in choose:
+        if char not in string.digits + string.ascii_letters:
+            print(f"'{char}' is not a valid input! try again.")
+            valid = False
+            break
+    
+    if valid:
+        same = choose.lower()
+        if same[::-1] == same:
+            print("Palindrome")
+            break
+        else:
+            print("Not a Palindrome")
+            break
