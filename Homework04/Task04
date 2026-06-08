@@ -17,8 +17,32 @@ while True:
     if valid:
         same = choose.lower()
         if same[::-1] == same:
-            print("Palindrome")
-            break
+            print("Palindrome!")
         else:
-            print("Not a Palindrome")
-            break
+            print("Not a Palindrome!")
+            closest = None
+            
+            for i in range(len(same) + 1):
+                for char in string.ascii_lowercase + string.digits:
+                    candidate = same[:i] + char + same[i:]
+                    if candidate == candidate[::-1]:
+                        closest = candidate
+                        break
+                if closest:
+                    break
+            
+            if closest:
+                print(f"Closest palindrome (insert): {closest}")
+            else:
+                remove_char = None
+                for i in range(len(same)):
+                    candidate = same[:i] + same[i+1:]
+                    if candidate == candidate[::-1]:
+                        closest = candidate
+                        remove_char = same[i]
+                        break
+                if closest:
+                    print(f"Closest palindrome (remove '{remove_char}'): {closest}")
+                else:
+                    print("No close palindrome found.")
+        break
