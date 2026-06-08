@@ -14,11 +14,6 @@
             "path": "Homework03",
             "envManager": "ms-python.python:venv",
             "packageManager": "ms-python.python:pip"
-        },
-        {
-            "path": "Homework04",
-            "envManager": "ms-python.python:venv",
-            "packageManager": "ms-python.python:pip"
         }
     ]
 }
